@@ -405,7 +405,7 @@ def generate():
         'author': 'Generated soundbank - Python program by Nomani',
         'voice': 'FM Synthesizer (literally)',
         'version': 'β1.0',
-        'web': 'https://github.com/path/to/project',
+        'web': 'https://github.com/Nomani-int64/Technebit',
         'default_phonemizer': 'OpenUtau.Plugin.Builtin.EnglishCpVPhonemizerBETA',
         'image': {
             'base': 'image_beta_en_c+v_b1.0.png',
