@@ -1309,7 +1309,7 @@ def generate():
         'author': 'Generated soundbank - Python program by Nomani',
         'voice': 'FM Synthesizer (literally)',
         'version': 'β1.0',
-        'web': 'https://github.com/path/to/project',
+        'web': 'https://github.com/Nomani-int64/Technebit',
         'image': {
             'base': 'image_beta_zh_cvv_b1.0.png',
             'overlay': {
