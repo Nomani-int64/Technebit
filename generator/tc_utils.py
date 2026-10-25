@@ -162,10 +162,10 @@ class Tc:
             print(f"[Info] {AUDIO_PATH}\\{fname}.wav saved successfully, {len(oto_entries)} oto entries added.")
             if self.save_frq_flag: self._calc_and_save_frq(seq, fname + '_wav')
 
-    def _calc_and_save_frq(self, seq: np.ndarray, fname: str, frame_length: int = 512, hop_length: int = 256, cheat: bool = True):
+    def _calc_and_save_frq(self, seq: np.ndarray, fname: str, frame_length: int = 1024, hop_length: int = 256, cheat: bool = True):
         'Calculates, encodes and saves a soundfile\'s frequency-amplitude table, aka. frq file'
         # Frequency table is conveniently calculated by LibRosa for us
-        freq_table, _, _ = librosa.pyin(seq, fmin = 60, fmax = 2000, sr = self.sample_rate,
+        freq_table, _, _ = librosa.pyin(seq, fmin = 90, fmax = 2000, sr = self.sample_rate,
                                        frame_length = frame_length, hop_length = hop_length, fill_na = 0)
         freq_average = np.mean(freq_table[freq_table >= 60]) if np.any(freq_table >= 60) else 0.0
         if cheat and 400 <= freq_average <= 480: # How the hell did pyin get a 440Hz
